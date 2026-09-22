@@ -7,7 +7,7 @@ structuring and managing assignments.
 ## Included plugin
 
 - Plugin: `aqc-konsult-hantering`
-- Marketplace: `niklas-plugins`
+- Marketplace: `aqc-plugins`
 - Skill: `uppdrag`
 - MCP server: none
 
@@ -23,7 +23,7 @@ From the root of this repository:
 
 ```sh
 codex plugin marketplace add .
-codex plugin add aqc-konsult-hantering --marketplace niklas-plugins
+codex plugin add aqc-konsult-hantering --marketplace aqc-plugins
 ```
 
 ### Install from the public GitHub repository
@@ -32,7 +32,7 @@ On another computer:
 
 ```sh
 codex plugin marketplace add NiklasAbrahamsson/aqc-chatgpt-plugins
-codex plugin add aqc-konsult-hantering --marketplace niklas-plugins
+codex plugin add aqc-konsult-hantering --marketplace aqc-plugins
 ```
 
 Because the repository is public, GitHub login is not required to install it.
@@ -59,7 +59,7 @@ npm install -g @openai/codex@latest
 After changes are pushed to GitHub, refresh the marketplace on each computer:
 
 ```sh
-codex plugin marketplace upgrade niklas-plugins
+codex plugin marketplace upgrade aqc-plugins
 ```
 
 Restart the desktop app afterward. When publishing a new plugin version, bump
