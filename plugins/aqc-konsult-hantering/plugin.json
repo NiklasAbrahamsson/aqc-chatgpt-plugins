@@ -6,8 +6,5 @@
   "author": {
     "name": "Niklas Abrahamsson"
   },
-  "skills": [
-    "./skills/konsult-hantering",
-    "./skills/uppdrag"
-  ]
+  "skills": ["./skills/uppdrag"]
 }
