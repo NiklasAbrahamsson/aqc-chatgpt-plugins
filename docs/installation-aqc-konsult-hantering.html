@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <title>Installera AQC konsult-hantering</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 18mm 19mm 18mm;
+      }
+      :root {
+        color: #1e293b;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      }
+      body {
+        font-size: 11pt;
+        line-height: 1.45;
+        margin: 0;
+      }
+      h1 {
+        color: #0f3d4c;
+        font-size: 25pt;
+        line-height: 1.1;
+        margin: 0 0 8pt;
+      }
+      h2 {
+        border-bottom: 1px solid #b9d2d8;
+        color: #0f3d4c;
+        font-size: 16pt;
+        margin: 22pt 0 9pt;
+        padding-bottom: 4pt;
+      }
+      h3 {
+        color: #176276;
+        font-size: 12pt;
+        margin: 16pt 0 5pt;
+      }
+      p {
+        margin: 6pt 0;
+      }
+      .intro {
+        color: #475569;
+        font-size: 12pt;
+        margin-bottom: 17pt;
+      }
+      .box {
+        background: #edf7f8;
+        border-left: 4px solid #2b7a8b;
+        margin: 12pt 0;
+        padding: 9pt 12pt;
+      }
+      .step {
+        break-inside: avoid;
+        margin: 12pt 0 15pt;
+      }
+      .number {
+        background: #0f3d4c;
+        border-radius: 50%;
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        height: 21pt;
+        line-height: 21pt;
+        margin-right: 7pt;
+        text-align: center;
+        width: 21pt;
+      }
+      .step-title {
+        color: #0f3d4c;
+        font-size: 13pt;
+        font-weight: bold;
+      }
+      code {
+        background: #f1f5f9;
+        border-radius: 3pt;
+        font-family: Menlo, monospace;
+        font-size: 9.5pt;
+        padding: 1pt 3pt;
+      }
+      pre {
+        background: #17212b;
+        border-radius: 4pt;
+        color: #f8fafc;
+        font-family: Menlo, monospace;
+        font-size: 9pt;
+        line-height: 1.5;
+        margin: 7pt 0;
+        padding: 9pt 11pt;
+        white-space: pre-wrap;
+      }
+      ul,
+      ol {
+        margin-top: 5pt;
+        padding-left: 21pt;
+      }
+      li {
+        margin: 4pt 0;
+      }
+      .small {
+        color: #64748b;
+        font-size: 9pt;
+      }
+      .footer {
+        border-top: 1px solid #cbd5e1;
+        color: #64748b;
+        font-size: 8.5pt;
+        margin-top: 23pt;
+        padding-top: 6pt;
+      }
+      a {
+        color: #176276;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Installera AQC konsult-hantering</h1>
+    <p class="intro">
+      En enkel steg-för-steg-guide för Mac. Installationen tar normalt bara
+      några minuter.
+    </p>
+
+    <div class="box">
+      <strong>Det här behöver du</strong><br />
+      En Mac med ChatGPT desktop-appen och internetanslutning. Du behöver inte
+      logga in på GitHub eftersom plugin-repot är offentligt.
+    </div>
+
+    <h2>Installation på Mac</h2>
+
+    <div class="step">
+      <span class="number">1</span
+      ><span class="step-title">Öppna Terminal</span>
+      <p>
+        Tryck på <strong>Command + mellanslag</strong>. Skriv
+        <strong>Terminal</strong> och tryck på Enter. Ett fönster med text
+        öppnas.
+      </p>
+    </div>
+
+    <div class="step">
+      <span class="number">2</span
+      ><span class="step-title">Installera Codex</span>
+      <p>
+        Kopiera hela raden nedan, klistra in den i Terminal och tryck på Enter:
+      </p>
+      <pre>npm install -g @openai/codex@latest</pre>
+      <p>
+        Vänta tills kommandot är färdigt. Om Macen frågar efter ditt lösenord
+        skriver du lösenordet du använder när du loggar in på Macen. Tecknen
+        syns inte medan du skriver; det är normalt.
+      </p>
+      <p class="small">
+        Om Terminal säger att kommandot <code>npm</code> saknas, kontakta er
+        administratör eller support innan du fortsätter.
+      </p>
+    </div>
+
+    <div class="step">
+      <span class="number">3</span
+      ><span class="step-title">Lägg till AQC:s plugin-marknadsplats</span>
+      <p>Kopiera raden nedan, klistra in den i Terminal och tryck på Enter:</p>
+      <pre>
+codex plugin marketplace add NiklasAbrahamsson/aqc-chatgpt-plugins</pre
+      >
+      <p>
+        Detta lägger till den offentliga marknadsplatsen
+        <strong>AQC Plugins</strong> på din Mac.
+      </p>
+    </div>
+
+    <div class="step">
+      <span class="number">4</span
+      ><span class="step-title">Installera pluginet</span>
+      <p>Kopiera raden nedan, klistra in den i Terminal och tryck på Enter:</p>
+      <pre>
+codex plugin add aqc-konsult-hantering --marketplace aqc-plugins</pre
+      >
+      <p>
+        Pluginet <strong>AQC konsult-hantering</strong> installeras nu lokalt på
+        din Mac.
+      </p>
+    </div>
+
+    <div class="step">
+      <span class="number">5</span
+      ><span class="step-title">Starta om ChatGPT</span>
+      <p>
+        Stäng ChatGPT desktop-appen helt och öppna den igen. Öppna sedan
+        plugin-menyn och kontrollera att
+        <strong>AQC konsult-hantering</strong> finns installerat under
+        <strong>AQC Plugins</strong>.
+      </p>
+    </div>
+
+    <h2>Kontrollera installationen</h2>
+    <p>Om du vill kontrollera installationen i Terminal kan du köra:</p>
+    <pre>
+codex plugin marketplace list
+codex plugin list</pre
+    >
+    <p>
+      Den första raden ska visa <strong>aqc-plugins</strong>. Den andra ska visa
+      <strong>aqc-konsult-hantering</strong>.
+    </p>
+
+    <h2>Om pluginet ska användas i webbläsaren</h2>
+    <p>
+      En installation på Macen gör inte automatiskt pluginet tillgängligt i
+      ChatGPT på webben.
+    </p>
+    <p>
+      För webbanvändning behöver en administratör i ett Business- eller
+      Enterprise-workspace publicera pluginet:
+    </p>
+    <ol>
+      <li>Öppna ChatGPT och gå till workspace-områdets plugin-sektion.</li>
+      <li>Välj <strong>Personal</strong>.</li>
+      <li>
+        Öppna menyn med tre punkter för <strong>AQC konsult-hantering</strong>.
+      </li>
+      <li>Välj <strong>Publish</strong>.</li>
+    </ol>
+    <p>
+      Efter publicering kan medlemmar i workspacet använda pluginet på webben
+      och på andra enheter. Menynamnen kan ändras när ChatGPT uppdateras.
+    </p>
+
+    <div class="box">
+      <strong>Viktigt:</strong> För ett personligt Plus- eller Pro-konto räcker
+      inte GitHub-repot för att få pluginet i webbläsaren. Då krävs antingen
+      publicering i ett Business- eller Enterprise-workspace, eller att pluginet
+      skickas in till OpenAI:s publika Plugins Directory för granskning.
+    </div>
+
+    <h2>Uppdateringar</h2>
+    <p>När en ny version har publicerats, öppna Terminal och kör:</p>
+    <pre>codex plugin marketplace upgrade aqc-plugins</pre>
+    <p>Starta sedan om ChatGPT desktop-appen.</p>
+
+    <div class="footer">
+      AQC konsult-hantering · AQC Plugins · Repo:
+      github.com/NiklasAbrahamsson/aqc-chatgpt-plugins
+    </div>
+  </body>
+</html>
