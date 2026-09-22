@@ -1,0 +1,13 @@
+{
+  "name": "niklas-plugins",
+  "display_name": "Niklas Plugins",
+  "description": "Personliga plugins for AQC och konsultarbete.",
+  "plugins": [
+    {
+      "name": "aqc-konsult-hantering",
+      "source": "./plugins/aqc-konsult-hantering",
+      "version": "0.1.0",
+      "description": "Stod for strukturering, matchning och uppfoljning av AQC-konsulter."
+    }
+  ]
+}

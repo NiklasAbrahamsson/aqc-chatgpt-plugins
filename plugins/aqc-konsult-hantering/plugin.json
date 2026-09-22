@@ -1,0 +1,12 @@
+{
+  "name": "aqc-konsult-hantering",
+  "display_name": "AQC konsult-hantering",
+  "version": "0.1.0",
+  "description": "Stod for strukturering, matchning och uppfoljning av AQC-konsulter.",
+  "author": {
+    "name": "Niklas Abrahamsson"
+  },
+  "skills": [
+    "./skills/konsult-hantering"
+  ]
+}
