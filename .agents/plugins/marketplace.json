@@ -7,7 +7,7 @@
       "name": "aqc-konsult-hantering",
       "source": "./plugins/aqc-konsult-hantering",
       "version": "0.1.0",
-      "description": "Stod for strukturering, matchning och uppfoljning av AQC-konsulter."
+      "description": "Stöd for strukturering, matchning och uppföljning av AQC-konsulter."
     }
   ]
 }

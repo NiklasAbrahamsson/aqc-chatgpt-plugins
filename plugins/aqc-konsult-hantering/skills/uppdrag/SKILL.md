@@ -14,8 +14,9 @@ The workflow is:
 1. Hand the assignment over to Konsultmatch `create_assignment` ("Skapa uppdrag") and let the platform own extraction, skill normalization, geocoding and language resolution.
 2. Publish the saved assignment and set the user as public contact person.
 3. Retrieve the public application URL.
-4. Create a HubSpot deal populated from the saved assignment.
-5. Return an email-ready Swedish summary with the full public URL visible.
+4. Ask the user whether they want to proceed with the HubSpot part.
+5. Only if the user confirms, create a HubSpot deal populated from the saved assignment.
+6. Return an email-ready Swedish summary with the full public URL visible.
 
 ## Step 1 — Skapa uppdrag
 
@@ -58,9 +59,15 @@ Notes:
 - Set `deadlineDate` only when the source states one.
 - Never fabricate the public URL. It comes from the tool response or from `get_assignment` (`publicSharing`).
 
-## Step 3 — HubSpot
+## Step 3 — Ask before HubSpot
 
-If HubSpot tools are available, create a deal representing the saved assignment.
+Konsultmatch is always handled automatically through the preceding steps. Before using any HubSpot tool, always ask the user explicitly whether they want to proceed with the HubSpot part. Do not create, update or associate any HubSpot records until the user confirms.
+
+If the user declines or does not confirm, skip HubSpot and continue with the email output. Report that HubSpot was not run because the user did not confirm.
+
+## Step 4 — HubSpot
+
+If the user confirmed and HubSpot tools are available, create a deal representing the saved assignment.
 
 The deal should:
 - be based on the saved assignment, not on a separately reinterpreted version of the posting;
@@ -71,7 +78,7 @@ The deal should:
 
 If an exact customer/company association cannot be established confidently, do not invent one.
 
-## Step 4 — Email output
+## Step 5 — Email output
 
 Return an email-ready Swedish summary that can be pasted into HubSpot.
 
